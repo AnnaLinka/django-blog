@@ -4,6 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Django Girls blog</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
@@ -18,7 +19,7 @@
          <main>
            <div>
                <p>published: {{ post.published_date }}</p>
-               <h1><a href="">{{ post.title }}</a></h1>
+               <h1><a href="https://djangogirls.org/" class="external_link" id="link_to_wiki_page">{{ post.title }}</a></h1>
            </div>
            <article>
              <p>{{ post.text|linebreaksbr }}</p>
