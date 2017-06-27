@@ -19,6 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('blog.urls')), #aby blogowe adresy tez miały swoje url-e nalezy tu dodać moduł blog, a w samym blog utworzyć plik urls.py i tam wpisać niezbędne rzeczy
-    url(r'^$', views.post_list, name='post_list'),
+    # url(r'^$', views.post_list, name='post_list'),
     url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail, name='post_detail'),
 ]
