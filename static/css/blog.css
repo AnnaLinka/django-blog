@@ -1,20 +1,16 @@
-body {
-  padding-left: 15px;
-}
-
 h1, h2, h3, h4 {
   color: rgb(201, 39, 180);
   font-family: 'Lobster';
 }
 
 .page-header {
-    background-color: rgba(169, 175, 165, 0.48);
+    background-color: rgb(201, 39, 180);
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    /*color: #ffffff;*/
+    color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
 }
@@ -48,5 +44,5 @@ h1, h2, h3, h4 {
 }
 
 .post h1 a, .post h1 a:visited {
-    color: #000000;
+    color: rgb(201, 39, 180);
 }
