@@ -1,43 +1,15 @@
-{% load staticfiles %}
+{% extends 'blog/base.html' %}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Django Girls blog</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  </head>
-  <body>
+{% block content %}
 
-    <header>
-      <h1 class="text-center"><a href="/">Django Girls Blog</a></h1>
-    </header>
-    <div class="content container">
-      <main>
-        <div class="row">
-          <div class="col-md-8">
-             {% for post in posts %}
-
-               <div class="post">
-                   <!-- <p>published: {{ post.published_date }}</p> -->
-                   <h1><a href="https://djangogirls.org/" class="external_link" id="link_to_wiki_page">{{ post.title }}</a></h1>
-
-                 <article>
-                   <p>{{ post.text|linebreaksbr }}</p>
-                 </article>
-               </div>
-              {% endfor %}
+    {% for post in posts %}
+      <div class="post">
+          <div class="date">
+              {{ post.published_date }}
           </div>
-        </div>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+  {% endfor %}
 
-
-      </main>
-
-
-       <footer>Copyright AZL</footer>
-
-  </body>
-</html>
+{% endblock content %}
